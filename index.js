@@ -26,7 +26,8 @@ export default {
 	plugins: [
 		'compat',
 		'react',
-		'jest'
+		'jest',
+		'react-hooks'
 	],
 
 	env: {
@@ -93,6 +94,12 @@ export default {
 		'react/jsx-indent-props': 0,
 		'react/jsx-pascal-case': 0,
 		'react/jsx-wrap-multilines': 0,
+
+		/**
+		 * Hooks
+		 */
+		'react-hooks/rules-of-hooks': 2,
+		'react-hooks/exhaustive-deps': 1,
 
 		/**
 		 * General JavaScript error avoidance
