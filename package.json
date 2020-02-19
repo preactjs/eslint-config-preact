@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-preact",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Unopinionated base ESLint configuration for Preact and Preact CLI projects.",
   "keywords": [
     "eslint",
