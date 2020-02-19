@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fixture: component invalid: fixtures/component/invalid.js 1`] = `
+"  ---
+  message: Component should be written as a pure function
+  severity: warning
+  data:
+    line: 3
+    column: 8
+    ruleId: react/prefer-stateless-function
+  messages:
+    - message: Useless constructor.
+      severity: warning
+      data:
+        line: 4
+        column: 2
+        ruleId: no-useless-constructor
+  ...
+"
+`;
+
+exports[`Fixture: component valid: fixtures/component/valid.js 1`] = `""`;
