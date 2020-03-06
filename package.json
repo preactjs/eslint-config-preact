@@ -13,8 +13,8 @@
   "module": "dist/eslint-config-preact.module.js",
   "exports": {
     ".": {
-      "import": "dist/eslint-config-preact.module.js",
-      "require": "dist/eslint-config-preact.js"
+      "import": "./dist/eslint-config-preact.module.js",
+      "require": "./dist/eslint-config-preact.js"
     }
   },
   "files": [
