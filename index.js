@@ -63,7 +63,11 @@ export default {
 		'react/no-deprecated': 2,
 		'react/react-in-jsx-scope': 0, // handled this automatically
 		'react/display-name': [1, { ignoreTranspilerName: false }],
-		'react/jsx-no-bind': [1, { ignoreRefs: true }],
+		'react/jsx-no-bind': [1, {
+			ignoreRefs: true,
+			allowFunctions: true,
+			allowArrowFunctions: true
+		}],
 		'react/jsx-no-comment-textnodes': 2,
 		'react/jsx-no-duplicate-props': 2,
 		'react/jsx-no-target-blank': 2,
