@@ -90,14 +90,14 @@ export default {
 		/**
 		 * Preact stylistic rules (disabled):
 		 */
-		'react/jsx-boolean-value': 0,
-		'react/jsx-closing-bracket-location': 0,
-		'react/jsx-curly-spacing': 0,
-		'react/jsx-max-props-per-line': 0,
-		'react/jsx-equals-spacing': 0,
-		'react/jsx-indent-props': 0,
-		'react/jsx-pascal-case': 0,
-		'react/jsx-wrap-multilines': 0,
+//		'react/jsx-boolean-value': 0,
+//		'react/jsx-closing-bracket-location': 0,
+//		'react/jsx-curly-spacing': 0,
+//		'react/jsx-max-props-per-line': 0,
+//		'react/jsx-equals-spacing': 0,
+//		'react/jsx-indent-props': 0,
+//		'react/jsx-pascal-case': 0,
+//		'react/jsx-wrap-multilines': 0,
 
 		/**
 		 * Hooks
@@ -148,24 +148,24 @@ export default {
 		/**
 		 * General JavaScript stylistic rules (disabled)
 		 */
-		semi: 0,
-		strict: [2, 'never'], // assume type=module output (cli default)
-		'object-curly-spacing': [0, 'always'],
-		'rest-spread-spacing': 0,
-		'space-before-function-paren': [0, 'always'],
-		'space-in-parens': [0, 'never'],
-		'object-shorthand': 1,
-		'prefer-arrow-callback': 1,
-		'prefer-rest-params': 1,
-		'prefer-spread': 1,
-		'prefer-template': 1,
-		quotes: [0, 'single', {
-			avoidEscape: true,
-			allowTemplateLiterals: true
-		}],
-		'quote-props': [2, 'as-needed'],
-		radix: 1, // parseInt(x, 10)
-		'unicode-bom': 2,
-		'valid-jsdoc': 0
+//		semi: 0,
+//		strict: [2, 'never'], // assume type=module output (cli default)
+//		'object-curly-spacing': [0, 'always'],
+//		'rest-spread-spacing': 0,
+//		'space-before-function-paren': [0, 'always'],
+//		'space-in-parens': [0, 'never'],
+//		'object-shorthand': 1,
+//		'prefer-arrow-callback': 1,
+//		'prefer-rest-params': 1,
+//		'prefer-spread': 1,
+//		'prefer-template': 1,
+//		quotes: [0, 'single', {
+//			avoidEscape: true,
+//			allowTemplateLiterals: true
+//		}],
+//		'quote-props': [2, 'as-needed'],
+//		radix: 1, // parseInt(x, 10)
+//		'unicode-bom': 2,
+//		'valid-jsdoc': 0
 	}
 };
