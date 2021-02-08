@@ -75,6 +75,7 @@ export default {
 		'react/jsx-tag-spacing': [2, { beforeSelfClosing: 'always' }],
 		'react/jsx-uses-react': 2, // debatable
 		'react/jsx-uses-vars': 2,
+		'react/jsx-key': [2, { checkFragmentShorthand: true },
 		'react/self-closing-comp': 2,
 		'react/prefer-es6-class': 2,
 		'react/prefer-stateless-function': 1,
