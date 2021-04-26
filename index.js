@@ -89,18 +89,6 @@ export default {
 		'react/no-string-refs': 2,
 
 		/**
-		 * Preact stylistic rules (disabled):
-		 */
-		'react/jsx-boolean-value': 0,
-		'react/jsx-closing-bracket-location': 0,
-		'react/jsx-curly-spacing': 0,
-		'react/jsx-max-props-per-line': 0,
-		'react/jsx-equals-spacing': 0,
-		'react/jsx-indent-props': 0,
-		'react/jsx-pascal-case': 0,
-		'react/jsx-wrap-multilines': 0,
-
-		/**
 		 * Hooks
 		 */
 		'react-hooks/rules-of-hooks': 2,
