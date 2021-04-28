@@ -1,7 +1,7 @@
 export default {
 	// TODO: this is really only required for class property initializer methods, which are seeing declining usage.
 	// At some point, we should un-ship the custom parser and let ESLint use esprima.
-	parser: require.resolve('babel-eslint'),
+	parser: require.resolve('@babel/eslint-parser'),
 
 	// Currently ignored due to the custom parser.
 	parserOptions: {
@@ -13,6 +13,10 @@ export default {
 			experimentalObjectRestSpread: true,
 			experimentalDecorators: true,
 			jsx: true
+		},
+		requireConfigFile: false,
+		babelOptions: {
+			plugins: ['@babel/plugin-syntax-jsx', '@babel/plugin-syntax-class-properties']
 		}
 	},
 
