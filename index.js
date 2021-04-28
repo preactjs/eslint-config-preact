@@ -10,13 +10,15 @@ export default {
 		ecmaFeatures: {
 			modules: true,
 			impliedStrict: true,
-			experimentalObjectRestSpread: true,
-			experimentalDecorators: true,
 			jsx: true
 		},
 		requireConfigFile: false,
 		babelOptions: {
-			plugins: ['@babel/plugin-syntax-jsx', '@babel/plugin-syntax-class-properties']
+			plugins: [
+				'@babel/plugin-syntax-class-properties',
+				['@babel/plugin-syntax-decorators', { decoratorsBeforeExport: false }],
+				'@babel/plugin-syntax-jsx'
+			]
 		}
 	},
 
