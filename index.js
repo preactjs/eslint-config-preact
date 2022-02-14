@@ -16,7 +16,7 @@ export default {
 		babelOptions: {
 			plugins: [
 				'@babel/plugin-syntax-class-properties',
-				['@babel/plugin-syntax-decorators', { decoratorsBeforeExport: false }],
+				['@babel/plugin-syntax-decorators', { useLegacy: true }],
 				'@babel/plugin-syntax-jsx'
 			]
 		}
