@@ -48,7 +48,6 @@
     "@babel/core": "^7.13.16",
     "@babel/eslint-parser": "^7.13.14",
     "@babel/plugin-syntax-class-properties": "^7.12.13",
-    "@babel/plugin-syntax-decorators": "^7.12.13",
     "@babel/plugin-syntax-jsx": "^7.12.13",
     "eslint-plugin-compat": "^4.0.0",
     "eslint-plugin-jest": "^25.2.4",
