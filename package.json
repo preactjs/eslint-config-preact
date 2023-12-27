@@ -48,21 +48,25 @@
     "@babel/core": "^7.13.16",
     "@babel/eslint-parser": "^7.13.14",
     "@babel/plugin-syntax-class-properties": "^7.12.13",
-    "@babel/plugin-syntax-jsx": "^7.12.13",
-    "eslint-plugin-compat": "^4.0.0",
-    "eslint-plugin-jest": "^25.2.4",
-    "eslint-plugin-react": "^7.27.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "@babel/plugin-syntax-jsx": "^7.12.13"
   },
   "devDependencies": {
     "@types/eslint": "^8.2.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^12.20.37",
     "eslint": "^8.2.0",
+    "eslint-plugin-compat": "^4.0.0",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "jest": "^27.3.1",
     "microbundle": "^0.14.1"
   },
   "peerDependencies": {
-    "eslint": "6.x || 7.x || 8.x"
+    "eslint": "6.x || 7.x || 8.x",
+    "eslint-plugin-compat": "^4.0.0",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
   }
 }
