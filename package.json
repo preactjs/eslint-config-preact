@@ -50,7 +50,7 @@
     "@babel/plugin-syntax-class-properties": "^7.12.13",
     "@babel/plugin-syntax-jsx": "^7.12.13",
     "eslint-plugin-compat": "^4.0.0",
-    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-jest": "^27.6.0",
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.3.0"
   },
@@ -63,6 +63,6 @@
     "microbundle": "^0.14.1"
   },
   "peerDependencies": {
-    "eslint": "6.x || 7.x || 8.x"
+    "eslint": "7.x || 8.x"
   }
 }
