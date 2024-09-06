@@ -63,6 +63,6 @@
     "microbundle": "^0.14.1"
   },
   "peerDependencies": {
-    "eslint": "6.x || 7.x || 8.x"
+    "eslint": "6.x || 7.x || 8.x || 9.x"
   }
 }
