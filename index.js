@@ -26,7 +26,6 @@ export default {
 		'eslint:recommended'
 	],
 
-	// TODO: preact-cli ships Jest now, Mocha may be a candidate for removal.
 	plugins: [
 		'compat',
 		'react',
