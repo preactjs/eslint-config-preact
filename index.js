@@ -23,22 +23,19 @@ export default {
 
 	// We don't use plugin:react/recommended here to avoid React-specific rules.
 	extends: [
-		'eslint:recommended',
-		'plugin:jest/recommended'
+		'eslint:recommended'
 	],
 
 	// TODO: preact-cli ships Jest now, Mocha may be a candidate for removal.
 	plugins: [
 		'compat',
 		'react',
-		'jest',
 		'react-hooks'
 	],
 
 	env: {
 		browser: true,
 		es6: true,
-		'jest/globals': true,
 		node: true
 	},
 
