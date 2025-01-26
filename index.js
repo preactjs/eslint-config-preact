@@ -157,6 +157,8 @@ const legacyConfig = {
 	// TODO: this is really only required for class property initializer methods, which are seeing declining usage.
 	// At some point, we should un-ship the custom parser and let ESLint use esprima.
 	parser: require.resolve('@babel/eslint-parser'),
+	// Currently ignored due to the custom parser.
+	parserOptions: { ...sharedParserOptions },
 
 	// We don't use plugin:react/recommended here to avoid React-specific rules.
 	extends: ['eslint:recommended'],
@@ -164,13 +166,13 @@ const legacyConfig = {
 	env: { browser: true, es6: true, node: true },
 
 	globals: { ...sharedGlobals },
-	parserOptions: { ...sharedParserOptions },
 	settings: { ...sharedSettings },
 	rules: { ...sharedRules }
 };
 
 /** @type {Config[]} */
 const flatConfig = [
+	// We don't use reactPlugin.configs.recommended here to avoid React-specific rules.
 	eslintJs.configs.recommended,
 
 	{
@@ -180,14 +182,18 @@ const flatConfig = [
 			'react-hooks': reactHooksPlugin
 		},
 		languageOptions: {
+			// TODO: this is really only required for class property initializer methods, which are seeing declining
+			// usage. At some point, we should un-ship the custom parser and let ESLint use esprima.
+			parser: babelEslintParser,
+			// Currently ignored due to the custom parser.
+			parserOptions: { ...sharedParserOptions },
+
 			globals: {
 				...globals.browser,
 				...globals.es2015,
 				...globals.node,
 				...sharedGlobals
-			},
-			parser: babelEslintParser,
-			parserOptions: { ...sharedParserOptions }
+			}
 		},
 		settings: { ...sharedSettings },
 		rules: { ...sharedRules }
