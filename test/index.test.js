@@ -5,7 +5,8 @@ const fs = require('fs');
 const cli = new eslint.ESLint({
 	fix: false,
 	cache: false,
-	errorOnUnmatchedPattern: true
+	errorOnUnmatchedPattern: true,
+	overrideConfigFile: path.resolve(__dirname, 'eslint.config.js')
 });
 async function lint (file) {
 	const lintResults = await cli.lintFiles(file);
