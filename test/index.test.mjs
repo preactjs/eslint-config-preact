@@ -1,6 +1,7 @@
-const eslint = require('eslint');
-const path = require('path');
-const fs = require('fs');
+import { describe, test, expect } from 'vitest';
+import eslint from 'eslint';
+import path from 'path';
+import fs from 'fs';
 
 const cli = new eslint.ESLint({
 	fix: false,
