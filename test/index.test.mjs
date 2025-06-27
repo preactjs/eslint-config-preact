@@ -5,6 +5,7 @@ import fs from 'fs';
 
 const configs = [
 	'eslintrc.test.json',
+	'eslint.config.test.mjs'
 ];
 const FIXTURES_PATH = path.resolve(__dirname, 'fixtures');
 const FIXTURES = fs.readdirSync(FIXTURES_PATH, {withFileTypes: true})
