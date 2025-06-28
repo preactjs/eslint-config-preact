@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
+exports[`config: eslintrc.test.json > Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
 "  ---
   message: Component should be written as a pure function
   severity: warning
@@ -19,9 +19,9 @@ exports[`Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
 "
 `;
 
-exports[`Fixture: component > valid > fixtures/component/valid.js 1`] = `""`;
+exports[`config: eslintrc.test.json > Fixture: component > valid > fixtures/component/valid.js 1`] = `""`;
 
-exports[`Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
+exports[`config: eslintrc.test.json > Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
 "  ---
   message: >-
     React Hook useCallback does nothing when called with only one argument. Did
@@ -44,4 +44,4 @@ exports[`Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
 "
 `;
 
-exports[`Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `""`;
+exports[`config: eslintrc.test.json > Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `""`;
