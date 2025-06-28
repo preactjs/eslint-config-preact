@@ -1,6 +1,7 @@
 {
   "name": "eslint-config-preact",
   "version": "1.5.0",
+  "type": "module",
   "description": "Unopinionated base ESLint configuration for Preact and Preact CLI projects.",
   "keywords": [
     "eslint",
@@ -9,28 +10,18 @@
   "repository": "preactjs/eslint-config-preact",
   "license": "MIT",
   "author": "The Preact Authors (https://preactjs.com)",
-  "main": "dist/eslint-config-preact.js",
-  "module": "dist/eslint-config-preact.module.js",
+  "main": "./index.js",
   "exports": {
     ".": {
-      "import": "./dist/eslint-config-preact.module.js",
-      "require": "./dist/eslint-config-preact.js"
-    },
-    "./flat": {
-      "import": "./dist/flat.module.js",
-      "require": "./dist/flat.js"
-    },
-    "./dist/*": {
-      "default": "./dist/*"
+      "default": "./index.js"
     }
   },
   "files": [
-    "dist"
+    "index.js"
   ],
   "scripts": {
-    "test": "eslint index.js && npm run -s build && vitest run",
-    "build": "microbundle -f es,cjs --target node --no-sourcemap --external eslint-plugin-compat,eslint-plugin-react,eslint-plugin-react-hooks,globals,@eslint/js,@babel/eslint-parser index.js flat.js",
-    "prepare": "npm run -s build && npm test",
+    "test": "eslint index.js && vitest run",
+    "prepare": "npm test",
     "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "eslintConfig": {
@@ -65,10 +56,9 @@
     "@types/eslint": "^9.6.1",
     "@types/node": "^24.0.4",
     "eslint": "^8.2.0",
-    "microbundle": "^0.14.1",
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "eslint": "6.x || 7.x || 8.x || 9.x"
+    "eslint": "8.x || 9.x"
   }
 }

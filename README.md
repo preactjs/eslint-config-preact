@@ -16,12 +16,21 @@ Install eslint and this config:
 npm i -D eslint eslint-config-preact
 ```
 
-Now in your `package.json`:
+Now in your `eslint.config.js`:
 
-````
-{
-  "eslintConfig": {
-    "extends": "preact"
-  }
-}
-````
+```ts
+import preact from 'eslint-config-preact';
+export default [
+  ...preact
+];
+```
+
+Or in CommonJS `eslint.config.cjs`:
+
+```ts
+const {default: preact} = require('eslint-config-preact');
+
+module.exports = [
+  ...preact
+];
+```
