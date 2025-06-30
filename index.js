@@ -71,7 +71,6 @@ const configs = [
 			'react/jsx-no-duplicate-props': 2,
 			'react/jsx-no-target-blank': 2,
 			'react/jsx-no-undef': 2,
-			'react/jsx-tag-spacing': [2, { beforeSelfClosing: 'always' }],
 			'react/jsx-uses-react': 2, // debatable
 			'react/jsx-uses-vars': 2,
 			'react/jsx-key': [2, { checkFragmentShorthand: true }],
@@ -106,17 +105,14 @@ const configs = [
 			'no-else-return': 1,
 			'no-empty-pattern': 0,
 			'no-empty': 0,
-			'no-extra-parens': 0,
 			'no-iterator': 2,
 			'no-lonely-if': 2,
-			'no-mixed-spaces-and-tabs': [1, 'smart-tabs'],
 			'no-multi-str': 1,
 			'no-new-wrappers': 2,
 			'no-proto': 2,
 			'no-redeclare': 2,
 			'no-shadow-restricted-names': 2,
 			'no-shadow': 0,
-			'no-spaced-func': 2,
 			'no-this-before-super': 2,
 			'no-undef-init': 2,
 			'no-unneeded-ternary': 2,
@@ -136,12 +132,7 @@ const configs = [
 			/**
 			 * General JavaScript stylistic rules (disabled)
 			 */
-			semi: 0,
 			strict: [2, 'never'], // assume type=module output (cli default)
-			'object-curly-spacing': [0, 'always'],
-			'rest-spread-spacing': 0,
-			'space-before-function-paren': [0, 'always'],
-			'space-in-parens': [0, 'never'],
 			'object-shorthand': 1,
 			'prefer-arrow-callback': 1,
 			'prefer-rest-params': 1,
@@ -151,7 +142,6 @@ const configs = [
 				avoidEscape: true,
 				allowTemplateLiterals: true
 			}],
-			'quote-props': [2, 'as-needed'],
 			radix: 1, // parseInt(x, 10)
 			'unicode-bom': 2,
 			'valid-jsdoc': 0
