@@ -4,16 +4,28 @@ on: [push]
 
 jobs:
   build:
-
+    name: ESLint ${{ matrix.eslint }} on Node ${{ matrix.node }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - 23
+          - 18
+        eslint:
+          - 8
+          - local
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node ${{ matrix.node }}
       uses: actions/setup-node@v1
       with:
-        node-version: '20.x'
+        node-version: ${{ matrix.node }}
     - run: npm install
+    - name: Install ESLint ${{ matrix.eslint }}
+      if: ${{ matrix.eslint != 'local' }}
+      run: npm install eslint@${{ matrix.eslint }} --no-save
     - run: npm run build --if-present
     - run: npm test
       env:
