@@ -1,93 +1,309 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`config: eslint.config.test.cjs > Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
-"  ---
-  message: Component should be written as a pure function
-  severity: warning
-  data:
-    line: 3
-    column: 8
-    ruleId: react/prefer-stateless-function
-  messages:
-    - message: Useless constructor.
-      severity: warning
-      data:
-        line: 4
-        column: 2
-        ruleId: no-useless-constructor
-  ...
-"
+[
+  {
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "filePath": "<filePath>",
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "messages": [
+      {
+        "column": 8,
+        "endColumn": 2,
+        "endLine": 7,
+        "line": 3,
+        "message": "Component should be written as a pure function",
+        "messageId": "componentShouldBePure",
+        "nodeType": "ClassDeclaration",
+        "ruleId": "react/prefer-stateless-function",
+        "severity": 1,
+      },
+      {
+        "column": 2,
+        "endColumn": 3,
+        "endLine": 6,
+        "line": 4,
+        "message": "Useless constructor.",
+        "messageId": "noUselessConstructor",
+        "nodeType": "MethodDefinition",
+        "ruleId": "no-useless-constructor",
+        "severity": 1,
+        "suggestions": [
+          {
+            "desc": "Remove the constructor.",
+            "fix": {
+              "range": [
+                73,
+                102,
+              ],
+              "text": "",
+            },
+            "messageId": "removeConstructor",
+          },
+        ],
+      },
+    ],
+    "source": "import { Component } from 'preact';
+
+export class A extends Component {
+	constructor() {
+		super();
+	}
+}
+",
+    "suppressedMessages": [],
+    "usedDeprecatedRules": [],
+    "warningCount": 2,
+  },
+]
 `;
 
-exports[`config: eslint.config.test.cjs > Fixture: component > valid > fixtures/component/valid.js 1`] = `""`;
+exports[`config: eslint.config.test.cjs > Fixture: component > valid > fixtures/component/valid.js 1`] = `
+[
+  {
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "filePath": "<filePath>",
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "messages": [],
+    "suppressedMessages": [],
+    "usedDeprecatedRules": [],
+    "warningCount": 0,
+  },
+]
+`;
 
 exports[`config: eslint.config.test.cjs > Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
-"  ---
-  message: >-
-    React Hook useCallback does nothing when called with only one argument. Did
-    you forget to pass an array of dependencies?
-  severity: warning
-  data:
-    line: 5
-    column: 20
-    ruleId: react-hooks/exhaustive-deps
-  messages:
-    - message: >-
-        React Hook useEffect has a missing dependency: 'value'. Either include it
-        or remove the dependency array.
-      severity: warning
-      data:
-        line: 9
-        column: 5
-        ruleId: react-hooks/exhaustive-deps
-  ...
-"
+[
+  {
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "filePath": "<filePath>",
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "messages": [
+      {
+        "column": 20,
+        "endColumn": 31,
+        "endLine": 5,
+        "line": 5,
+        "message": "React Hook useCallback does nothing when called with only one argument. Did you forget to pass an array of dependencies?",
+        "nodeType": "Identifier",
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+      },
+      {
+        "column": 5,
+        "endColumn": 7,
+        "endLine": 9,
+        "line": 9,
+        "message": "React Hook useEffect has a missing dependency: 'value'. Either include it or remove the dependency array.",
+        "nodeType": "ArrayExpression",
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "suggestions": [
+          {
+            "desc": "Update the dependencies array to be: [value]",
+            "fix": {
+              "range": [
+                236,
+                238,
+              ],
+              "text": "[value]",
+            },
+          },
+        ],
+      },
+    ],
+    "source": "import { useState, useCallback, useEffect } from 'preact/hooks';
+
+export function Foo () {
+	const [value, setValue] = useState(0);
+	const increment = useCallback(() => setValue(value + 1));
+
+	useEffect(() => {
+		console.log(value);
+	}, []);
+
+	return <button onClick={increment}>{value}</button>;
+}
+",
+    "suppressedMessages": [],
+    "usedDeprecatedRules": [],
+    "warningCount": 2,
+  },
+]
 `;
 
-exports[`config: eslint.config.test.cjs > Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `""`;
+exports[`config: eslint.config.test.cjs > Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `
+[
+  {
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "filePath": "<filePath>",
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "messages": [],
+    "suppressedMessages": [],
+    "usedDeprecatedRules": [],
+    "warningCount": 0,
+  },
+]
+`;
 
 exports[`config: eslint.config.test.mjs > Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
-"  ---
-  message: Component should be written as a pure function
-  severity: warning
-  data:
-    line: 3
-    column: 8
-    ruleId: react/prefer-stateless-function
-  messages:
-    - message: Useless constructor.
-      severity: warning
-      data:
-        line: 4
-        column: 2
-        ruleId: no-useless-constructor
-  ...
-"
+[
+  {
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "filePath": "<filePath>",
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "messages": [
+      {
+        "column": 8,
+        "endColumn": 2,
+        "endLine": 7,
+        "line": 3,
+        "message": "Component should be written as a pure function",
+        "messageId": "componentShouldBePure",
+        "nodeType": "ClassDeclaration",
+        "ruleId": "react/prefer-stateless-function",
+        "severity": 1,
+      },
+      {
+        "column": 2,
+        "endColumn": 3,
+        "endLine": 6,
+        "line": 4,
+        "message": "Useless constructor.",
+        "messageId": "noUselessConstructor",
+        "nodeType": "MethodDefinition",
+        "ruleId": "no-useless-constructor",
+        "severity": 1,
+        "suggestions": [
+          {
+            "desc": "Remove the constructor.",
+            "fix": {
+              "range": [
+                73,
+                102,
+              ],
+              "text": "",
+            },
+            "messageId": "removeConstructor",
+          },
+        ],
+      },
+    ],
+    "source": "import { Component } from 'preact';
+
+export class A extends Component {
+	constructor() {
+		super();
+	}
+}
+",
+    "suppressedMessages": [],
+    "usedDeprecatedRules": [],
+    "warningCount": 2,
+  },
+]
 `;
 
-exports[`config: eslint.config.test.mjs > Fixture: component > valid > fixtures/component/valid.js 1`] = `""`;
+exports[`config: eslint.config.test.mjs > Fixture: component > valid > fixtures/component/valid.js 1`] = `
+[
+  {
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "filePath": "<filePath>",
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "messages": [],
+    "suppressedMessages": [],
+    "usedDeprecatedRules": [],
+    "warningCount": 0,
+  },
+]
+`;
 
 exports[`config: eslint.config.test.mjs > Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
-"  ---
-  message: >-
-    React Hook useCallback does nothing when called with only one argument. Did
-    you forget to pass an array of dependencies?
-  severity: warning
-  data:
-    line: 5
-    column: 20
-    ruleId: react-hooks/exhaustive-deps
-  messages:
-    - message: >-
-        React Hook useEffect has a missing dependency: 'value'. Either include it
-        or remove the dependency array.
-      severity: warning
-      data:
-        line: 9
-        column: 5
-        ruleId: react-hooks/exhaustive-deps
-  ...
-"
+[
+  {
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "filePath": "<filePath>",
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "messages": [
+      {
+        "column": 20,
+        "endColumn": 31,
+        "endLine": 5,
+        "line": 5,
+        "message": "React Hook useCallback does nothing when called with only one argument. Did you forget to pass an array of dependencies?",
+        "nodeType": "Identifier",
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+      },
+      {
+        "column": 5,
+        "endColumn": 7,
+        "endLine": 9,
+        "line": 9,
+        "message": "React Hook useEffect has a missing dependency: 'value'. Either include it or remove the dependency array.",
+        "nodeType": "ArrayExpression",
+        "ruleId": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "suggestions": [
+          {
+            "desc": "Update the dependencies array to be: [value]",
+            "fix": {
+              "range": [
+                236,
+                238,
+              ],
+              "text": "[value]",
+            },
+          },
+        ],
+      },
+    ],
+    "source": "import { useState, useCallback, useEffect } from 'preact/hooks';
+
+export function Foo () {
+	const [value, setValue] = useState(0);
+	const increment = useCallback(() => setValue(value + 1));
+
+	useEffect(() => {
+		console.log(value);
+	}, []);
+
+	return <button onClick={increment}>{value}</button>;
+}
+",
+    "suppressedMessages": [],
+    "usedDeprecatedRules": [],
+    "warningCount": 2,
+  },
+]
 `;
 
-exports[`config: eslint.config.test.mjs > Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `""`;
+exports[`config: eslint.config.test.mjs > Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `
+[
+  {
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "filePath": "<filePath>",
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "messages": [],
+    "suppressedMessages": [],
+    "usedDeprecatedRules": [],
+    "warningCount": 0,
+  },
+]
+`;
