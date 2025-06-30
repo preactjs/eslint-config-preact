@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
+exports[`config: eslint.config.test.cjs > Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
 "  ---
   message: Component should be written as a pure function
   severity: warning
@@ -19,9 +19,9 @@ exports[`Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
 "
 `;
 
-exports[`Fixture: component > valid > fixtures/component/valid.js 1`] = `""`;
+exports[`config: eslint.config.test.cjs > Fixture: component > valid > fixtures/component/valid.js 1`] = `""`;
 
-exports[`Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
+exports[`config: eslint.config.test.cjs > Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
 "  ---
   message: >-
     React Hook useCallback does nothing when called with only one argument. Did
@@ -44,4 +44,50 @@ exports[`Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
 "
 `;
 
-exports[`Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `""`;
+exports[`config: eslint.config.test.cjs > Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `""`;
+
+exports[`config: eslint.config.test.mjs > Fixture: component > invalid > fixtures/component/invalid.js 1`] = `
+"  ---
+  message: Component should be written as a pure function
+  severity: warning
+  data:
+    line: 3
+    column: 8
+    ruleId: react/prefer-stateless-function
+  messages:
+    - message: Useless constructor.
+      severity: warning
+      data:
+        line: 4
+        column: 2
+        ruleId: no-useless-constructor
+  ...
+"
+`;
+
+exports[`config: eslint.config.test.mjs > Fixture: component > valid > fixtures/component/valid.js 1`] = `""`;
+
+exports[`config: eslint.config.test.mjs > Fixture: hooks > invalid > fixtures/hooks/invalid.js 1`] = `
+"  ---
+  message: >-
+    React Hook useCallback does nothing when called with only one argument. Did
+    you forget to pass an array of dependencies?
+  severity: warning
+  data:
+    line: 5
+    column: 20
+    ruleId: react-hooks/exhaustive-deps
+  messages:
+    - message: >-
+        React Hook useEffect has a missing dependency: 'value'. Either include it
+        or remove the dependency array.
+      severity: warning
+      data:
+        line: 9
+        column: 5
+        ruleId: react-hooks/exhaustive-deps
+  ...
+"
+`;
+
+exports[`config: eslint.config.test.mjs > Fixture: hooks > valid > fixtures/hooks/valid.js 1`] = `""`;
