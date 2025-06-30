@@ -10,8 +10,8 @@ jobs:
       fail-fast: false
       matrix:
         node:
+          - 20
           - 23
-          - 18
         eslint:
           - 8
           - local

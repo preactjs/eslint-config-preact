@@ -14,9 +14,15 @@ const FIXTURES = fs.readdirSync(FIXTURES_PATH, {withFileTypes: true})
 
 async function lint (file, cli) {
 	const lintResults = await cli.lintFiles(file);
-	const formatter = await cli.loadFormatter('tap');
-	const text = formatter.format(lintResults).replace(/^TAP.+\n.+\n.+\n/g, '');
-	return Object.assign({text}, lintResults[0]);
+	const formatter = await cli.loadFormatter('json');
+	const report = JSON.parse(formatter.format(lintResults));
+	return {
+		report: report.map((r) => ({
+			...r,
+			filePath: '<filePath>'
+		})),
+		...lintResults[0],
+	};
 }
 
 for (const config of configs) {
@@ -44,16 +50,14 @@ for (const config of configs) {
 			describe(`Fixture: ${dir}`, () => {
 				test('valid', async () => {
 					const report = await lint(p('valid.js'), cli);
-					expect(report.text).not.toBeTruthy();
 					expect(report).toHaveProperty('errorCount', 0);
 					expect(report).toHaveProperty('warningCount', 0);
-					expect(report.text).toMatchSnapshot(`fixtures/${dir}/valid.js`);
+					expect(report.report).toMatchSnapshot(`fixtures/${dir}/valid.js`);
 				});
 				test('invalid', async () => {
 					const report = await lint(p('invalid.js'), cli);
-					expect(report.text).toBeTruthy();
 					expect(report.errorCount + report.warningCount).toBeGreaterThan(0);
-					expect(report.text).toMatchSnapshot(`fixtures/${dir}/invalid.js`);
+					expect(report.report).toMatchSnapshot(`fixtures/${dir}/invalid.js`);
 				});
 			});
 		}
