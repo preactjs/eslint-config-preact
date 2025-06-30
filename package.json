@@ -20,26 +20,10 @@
     "index.js"
   ],
   "scripts": {
-    "test": "eslint index.js && vitest run",
+    "lint": "eslint .",
+    "test": "npm run lint && vitest run",
     "prepare": "npm test",
     "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
-  },
-  "eslintConfig": {
-    "extends": "eslint:recommended",
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module"
-    },
-    "env": {
-      "node": true
-    },
-    "rules": {
-      "no-empty": 0
-    },
-    "ignorePatterns": [
-      "test/fixtures/**",
-      "test/__snapshots__/**"
-    ]
   },
   "dependencies": {
     "@babel/core": "^7.13.16",
@@ -59,6 +43,6 @@
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "eslint": "8.x || 9.x"
+    "eslint": "^8.57.1 || ^9.0.0"
   }
 }
