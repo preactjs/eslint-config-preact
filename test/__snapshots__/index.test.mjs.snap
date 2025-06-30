@@ -19,6 +19,7 @@ exports[`config: eslint.config.test.cjs > Fixture: component > invalid > fixture
         "nodeType": "ClassDeclaration",
         "ruleId": "react/prefer-stateless-function",
         "severity": 1,
+        "suggestions": undefined,
       },
       {
         "column": 2,
@@ -30,19 +31,7 @@ exports[`config: eslint.config.test.cjs > Fixture: component > invalid > fixture
         "nodeType": "MethodDefinition",
         "ruleId": "no-useless-constructor",
         "severity": 1,
-        "suggestions": [
-          {
-            "desc": "Remove the constructor.",
-            "fix": {
-              "range": [
-                73,
-                102,
-              ],
-              "text": "",
-            },
-            "messageId": "removeConstructor",
-          },
-        ],
+        "suggestions": undefined,
       },
     ],
     "source": "import { Component } from 'preact';
@@ -94,6 +83,7 @@ exports[`config: eslint.config.test.cjs > Fixture: hooks > invalid > fixtures/ho
         "nodeType": "Identifier",
         "ruleId": "react-hooks/exhaustive-deps",
         "severity": 1,
+        "suggestions": undefined,
       },
       {
         "column": 5,
@@ -104,18 +94,7 @@ exports[`config: eslint.config.test.cjs > Fixture: hooks > invalid > fixtures/ho
         "nodeType": "ArrayExpression",
         "ruleId": "react-hooks/exhaustive-deps",
         "severity": 1,
-        "suggestions": [
-          {
-            "desc": "Update the dependencies array to be: [value]",
-            "fix": {
-              "range": [
-                236,
-                238,
-              ],
-              "text": "[value]",
-            },
-          },
-        ],
+        "suggestions": undefined,
       },
     ],
     "source": "import { useState, useCallback, useEffect } from 'preact/hooks';
@@ -173,6 +152,7 @@ exports[`config: eslint.config.test.mjs > Fixture: component > invalid > fixture
         "nodeType": "ClassDeclaration",
         "ruleId": "react/prefer-stateless-function",
         "severity": 1,
+        "suggestions": undefined,
       },
       {
         "column": 2,
@@ -184,19 +164,7 @@ exports[`config: eslint.config.test.mjs > Fixture: component > invalid > fixture
         "nodeType": "MethodDefinition",
         "ruleId": "no-useless-constructor",
         "severity": 1,
-        "suggestions": [
-          {
-            "desc": "Remove the constructor.",
-            "fix": {
-              "range": [
-                73,
-                102,
-              ],
-              "text": "",
-            },
-            "messageId": "removeConstructor",
-          },
-        ],
+        "suggestions": undefined,
       },
     ],
     "source": "import { Component } from 'preact';
@@ -248,6 +216,7 @@ exports[`config: eslint.config.test.mjs > Fixture: hooks > invalid > fixtures/ho
         "nodeType": "Identifier",
         "ruleId": "react-hooks/exhaustive-deps",
         "severity": 1,
+        "suggestions": undefined,
       },
       {
         "column": 5,
@@ -258,18 +227,7 @@ exports[`config: eslint.config.test.mjs > Fixture: hooks > invalid > fixtures/ho
         "nodeType": "ArrayExpression",
         "ruleId": "react-hooks/exhaustive-deps",
         "severity": 1,
-        "suggestions": [
-          {
-            "desc": "Update the dependencies array to be: [value]",
-            "fix": {
-              "range": [
-                236,
-                238,
-              ],
-              "text": "[value]",
-            },
-          },
-        ],
+        "suggestions": undefined,
       },
     ],
     "source": "import { useState, useCallback, useEffect } from 'preact/hooks';

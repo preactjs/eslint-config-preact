@@ -19,6 +19,10 @@ async function lint (file, cli) {
 	return {
 		report: report.map((r) => ({
 			...r,
+			messages: r.messages.map((m) => ({
+				...m,
+				suggestions: undefined, // since ESLint 8 doesn't return these
+			})),
 			filePath: '<filePath>'
 		})),
 		...lintResults[0],
