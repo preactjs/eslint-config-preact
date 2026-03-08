@@ -1,4 +1,3 @@
-import parser from '@babel/eslint-parser';
 import eslintJS from '@eslint/js';
 import compat from 'eslint-plugin-compat';
 import react from 'eslint-plugin-react';
@@ -9,24 +8,11 @@ const configs = [
 	eslintJS.configs.recommended,
 	{
 		languageOptions: {
-			// TODO: this is really only required for class property initializer methods, which are seeing declining usage.
-			// At some point, we should un-ship the custom parser and let ESLint use esprima.
-			parser,
-			// Currently ignored due to the custom parser.
+			ecmaVersion: 'latest',
+			sourceType: 'module',
 			parserOptions: {
-				ecmaVersion: 2020,
-				sourceType: 'module',
 				ecmaFeatures: {
-					modules: true,
-					impliedStrict: true,
 					jsx: true
-				},
-				requireConfigFile: false,
-				babelOptions: {
-					plugins: [
-						'@babel/plugin-syntax-class-properties',
-						'@babel/plugin-syntax-jsx'
-					]
 				}
 			},
 			globals: {

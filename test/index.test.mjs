@@ -21,6 +21,9 @@ async function lint (file, cli) {
 			...r,
 			messages: r.messages.map((m) => ({
 				...m,
+				nodeType: undefined, // removed in ESLint 10
+				endLine: undefined,  // may vary across ESLint versions
+				endColumn: undefined, // may vary across ESLint versions
 				suggestions: undefined, // since ESLint 8 doesn't return these
 			})),
 			filePath: '<filePath>'
